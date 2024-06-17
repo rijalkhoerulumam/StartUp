@@ -1,0 +1,61 @@
+<nav>
+    <ul>
+
+      <!-- Search -->
+      <li>
+        <input type="text" id="search_box" placeholder="">
+          <script>
+            const searchInput = document.getElementById("search");
+
+            searchInput.addEventListener("keyup", function(event) {
+              if (event.keyCode === 13) {
+                event.preventDefault();
+                searchFunction();
+              }
+            });
+
+            function searchFunction() {
+              // Logic for search functionality
+            }
+          </script>
+
+      <!-- Menu -->
+      </li>
+      <li id="space1"></li>
+      <li>
+        <a class="" href="profile.html" id="profile"><i class="bi bi-person-circle"></i>  </a>
+      </li>
+      <li>
+        <a class="" href="inbox.html" id="inbox"><i class="bi bi-envelope-fill"></i>  </a>
+      </li>
+      <li>
+        <a class="" href="group.html" id="group"><i class="bi bi-people-fill"></i>  </a>
+      </li>
+      <li>
+        <a class="" href="wibs.html" id="logo"><img src="img/logo.jpg" alt="Wibs"></i>  </a>
+      </li>
+      <li>
+        <a class="" href="friend.html" id="friend"><i class="bi bi-person-fill-add"></i>  </a>
+      </li>
+      <li>
+        <a class="" href="notification.html" id="notify"><i class="bi bi-bell-fill"></i>  </a>
+      </li>
+      <li>
+        <a class="" href="event.html" id="event"><i class="bi bi-calendar-event-fill"></i> </a>
+      </li>
+
+      <!-- Dark & Light Mode -->
+      <li id="space1"></li>
+      <li>
+        <button onclick="myFunction()"><i class="bi bi-toggles"></i> </button>
+          <script>
+            function myFunction() {
+            var element = document.body;
+            element.classList.toggle("dark-mode");
+            var nav = document.querySelector("nav");
+            nav.classList.toggle("dark-mode");
+            }
+          </script>
+      </li>
+    </ul>
+  </nav>
